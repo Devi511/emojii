@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    background-color: #b6f58c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+  }
+
+  .rabbit {
+    width: 200px;
+    height: 300px;
+    position: relative;
+  }
+
+  .ear {
+    width: 70px;
+    height: 120px;
+    background-color: #ffcc80;
+    position: absolute;
+    border-radius: 50%;
+    transform-origin: bottom;
+  }
+
+  .ear.left {
+    left: 30px;
+    transform: rotate(-30deg);
+  }
+
+  .ear.right {
+    right: 30px;
+    transform: rotate(30deg);
+  }
+
+  .face {
+    width: 120px;
+    height: 120px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .eye {
+    width: 30px;
+    height: 30px;
+    background-color: #333;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    animation: blink 3s infinite alternate;
+  }
+
+  .eye.left {
+    left: 30px;
+  }
+
+  .eye.right {
+    right: 30px;
+  }
+
+  @keyframes blink {
+    0%, 100% {
+      height: 30px;
+    }
+    50% {
+      height: 5px;
+    }
+  }
+
+  .nose {
+    width: 20px;
+    height: 20px;
+    background-color: #ffcc80;
+    border-radius: 50%;
+    position: absolute;
+    top: 80px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+</style>
+<title>Rabbit Animation</title>
+</head>
+<body>
+    <marquee><h1>RABBIT</h1></marquee>
+  <div class="rabbit">
+    <div class="ear left"></div>
+    <div class="ear right"></div>
+    <div class="face">
+      <div class="eye left"></div>
+      <div class="eye right"></div>
+      <div class="nose"></div>
+      <div class="mouth"></div>
+    </div>
+  </div>
+</body>
+</html>
